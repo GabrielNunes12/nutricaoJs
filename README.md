@@ -5,6 +5,12 @@ se dá o IMC de uma pessoa!
 
 ![nutricao](https://user-images.githubusercontent.com/48297244/88466934-c8af1880-cea7-11ea-86b1-324fb062466a.png)
 
+# O que acontece quando tem um dado inválido na tabela?
+
+![nutricao2](https://user-images.githubusercontent.com/48297244/88467207-f184dd00-ceaa-11ea-9a9d-e58f93b5bb91.png)
+
+fica uma linha em vermelho
+
 # O que aprendi com esse projeto com javascript puro
 
 [x] manipular dados de uma tabela em HTML
@@ -26,3 +32,5 @@ git clone https://github.com/GabrielNunes12/nutricaoJs.git
 
 e a partir disso, a sua criatividade é o limite, lembrando que tem que me mandar um pull request, para que a sua
 versão entre para o projeto okay?
+
+
