@@ -39,3 +39,41 @@ for (let i = 0; i < pacientes.length; i++) {
     paciente.classList.add("paciente-valido");
   }
 }
+
+//pegando o botão adicionar paciente
+let botaoAdd = document.querySelector("#adicionar-paciente");
+botaoAdd.addEventListener("click", function (event) {
+  // prevenindo que de f5 automaticamente na página
+  event.preventDefault();
+
+  // pegando os valores do fomulario de cadastro
+  let form = document.querySelector("#formAdicionar");
+  const pesoCadastro = form.peso.value;
+  const alturaCadastro = form.altura.value;
+  const nomeCadastro = form.nome.value;
+  const gorduraCadastro = form.gordura.value;
+
+  //criando as trs e tds para serem adicionados a lista
+  let pacienteNaTable = document.createElement("tr");
+  let pesoNaTable = document.createElement("td");
+  let nomeNaTable = document.createElement("td");
+  let gorduraNaTable = document.createElement("td");
+  let alturaNaTable = document.createElement("td");
+  let imcNaTable = document.createElement("td");
+
+  //pegando os valores
+  pesoNaTable.innerText = pesoCadastro;
+  nomeNaTable.innerText = nomeCadastro;
+  alturaNaTable.innerText = alturaCadastro;
+  gorduraNaTable.innerText = gorduraCadastro;
+
+  //adicionando nas trs e tds
+  pacienteNaTable.appendChild(pesoNaTable);
+  pacienteNaTable.appendChild(alturaNaTable);
+  pacienteNaTable.appendChild(gorduraNaTable);
+  pacienteNaTable.appendChild(nomeNaTable);
+
+  //vinculando a tabela no html
+  let tabelaHtml = document.querySelector("#tabela-pacientes");
+  tabelaHtml.appendChild(pacienteNaTable);
+});
