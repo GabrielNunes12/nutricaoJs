@@ -27,6 +27,8 @@ fica uma linha em vermelho
 
 [x] renderização dinâmica dos dados atráves do formulário no javascript
 
+[x] criação de um design pattern para o projeto seguindo o SOLID
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
