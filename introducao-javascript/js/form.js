@@ -5,12 +5,8 @@ botaoAdicionar.addEventListener("click", function (event) {
   event.preventDefault();
 
   // pegando os valores do fomulario de cadastro
-  let form = document.querySelector("#formAdicionar");
-  let nome = form.nome.value;
-  let peso = form.peso.value;
-  let altura = form.altura.value;
-  let gordura = form.gordura.value;
-
+  var form = document.querySelector("#formAdicionar");
+  let paciente = getForm(form);
   //criando as trs e tds para serem adicionados a lista
   let pacienteTr = document.createElement("tr");
   let nomeTd = document.createElement("td");
@@ -20,11 +16,11 @@ botaoAdicionar.addEventListener("click", function (event) {
   let imcTd = document.createElement("td");
 
   //pegando os valores
-  nomeTd.textContent = nome;
-  pesoTd.textContent = peso;
-  alturaTd.textContent = altura;
-  gorduraTd.textContent = gordura;
-  imcTd.textContent = calculaImc(peso, altura);
+  nomeTd.textContent = paciente.nome;
+  pesoTd.textContent = paciente.peso;
+  alturaTd.textContent = paciente.altura;
+  gorduraTd.textContent = paciente.gordura;
+  imcTd.textContent = paciente.imc;
 
   //adicionando nas trs e tds
   pacienteTr.appendChild(nomeTd);
@@ -37,3 +33,14 @@ botaoAdicionar.addEventListener("click", function (event) {
   let tabela = document.querySelector("#tabela-pacientes");
   tabela.appendChild(pacienteTr);
 });
+
+function getForm(form) {
+  paciente = {
+    nome: form.nome.value,
+    peso: form.peso.value,
+    altura: form.altura.value,
+    gordura: form.gordura.value,
+    imc: calculaImc(form.peso.value, form.altura.value),
+  };
+  return paciente;
+}
