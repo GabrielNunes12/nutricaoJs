@@ -25,6 +25,8 @@ fica uma linha em vermelho
 
 [x] Aprendi a função appendChild(), e eventListener();
 
+[x] renderização dinâmica dos dados atráves do formulário no javascript
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
