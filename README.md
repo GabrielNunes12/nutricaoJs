@@ -21,6 +21,10 @@ fica uma linha em vermelho
 
 [x] criação de dados estáticos e manipulação estática.
 
+[x] criar um form e pegar os dados e adiciona-los através do Javascript
+
+[x] Aprendi a função appendChild(), e eventListener();
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
