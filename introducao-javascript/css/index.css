@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: rgb(27, 160, 200);
   height: 3em;
   color: #fff;
   margin-bottom: 1em;
@@ -67,7 +67,7 @@ th {
 
 th {
   font-weight: bold;
-  background-color: #eee;
+  background-color: rgb(186, 205, 250);
 }
 
 label {
