@@ -87,7 +87,7 @@ label {
 
 .campo-medio {
   display: inline-block;
-  padding-right: 0.5em;
+  padding-right: 0.7em;
 }
 
 .grupo {
@@ -105,8 +105,8 @@ button {
   margin: 0;
   margin-top: -3px;
   color: #fff;
-  background-color: #0c8cd3;
-  border-color: #04324c;
+  background-color: #3450b7;
+  border-color: #4423ffa4;
   width: 20%;
   display: block;
   clear: both;
