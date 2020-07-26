@@ -44,4 +44,7 @@ git clone https://github.com/GabrielNunes12/nutricaoJs.git
 e a partir disso, a sua criatividade é o limite, lembrando que tem que me mandar um pull request, para que a sua
 versão entre para o projeto okay?
 
+# Como rodar o projeto?
+Eu recomendo você baixar uma extensão no seu VScode chamado Live server, é ela que eu uso para fazer o render instantaneo quando eu salvo o arquivo
+
 
