@@ -10,12 +10,22 @@ botaoAdicionar.addEventListener("click", function (event) {
 
   let pacienteDaTr = montarUmaTr(paciente);
 
-  //vinculando a tabela no html
-  let tabela = document.querySelector("#tabela-pacientes");
-  tabela.appendChild(pacienteDaTr);
+  const erro = validaPaciente(paciente);
 
-  //limpando o form
-  form.reset();
+  if (erro.length > 0) {
+    let mensagemErro = document.querySelector("#erroMensagem");
+    mensagemErro.classList.add("paciente-invalido");
+    mensagemErro.textContent = erro;
+    return;
+  } else {
+    //vinculando a tabela no html
+    let tabela = document.querySelector("#tabela-pacientes");
+    tabela.classList.add("paciente-valido");
+    tabela.appendChild(pacienteDaTr);
+
+    //limpando o form
+    form.reset();
+  }
 });
 
 function getForm(form) {
@@ -49,4 +59,12 @@ function montarTds(dado, classe) {
   tdsNoHtml.classList.add(classe);
 
   return tdsNoHtml;
+}
+
+function validaPaciente(paciente) {
+  if (validaPeso(paciente.peso) && validaAltura(paciente.altura)) {
+    return "";
+  } else {
+    return `O peso foi ${paciente.peso} não pode ser acima de 1000 e altura foi ${paciente.altura} não pode ser acima dos 3m`;
+  }
 }
