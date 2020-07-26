@@ -7,31 +7,15 @@ botaoAdicionar.addEventListener("click", function (event) {
   // pegando os valores do fomulario de cadastro
   var form = document.querySelector("#formAdicionar");
   let paciente = getForm(form);
-  //criando as trs e tds para serem adicionados a lista
-  let pacienteTr = document.createElement("tr");
-  let nomeTd = document.createElement("td");
-  let pesoTd = document.createElement("td");
-  let alturaTd = document.createElement("td");
-  let gorduraTd = document.createElement("td");
-  let imcTd = document.createElement("td");
 
-  //pegando os valores
-  nomeTd.textContent = paciente.nome;
-  pesoTd.textContent = paciente.peso;
-  alturaTd.textContent = paciente.altura;
-  gorduraTd.textContent = paciente.gordura;
-  imcTd.textContent = paciente.imc;
-
-  //adicionando nas trs e tds
-  pacienteTr.appendChild(nomeTd);
-  pacienteTr.appendChild(pesoTd);
-  pacienteTr.appendChild(alturaTd);
-  pacienteTr.appendChild(gorduraTd);
-  pacienteTr.appendChild(imcTd);
+  let pacienteDaTr = montarUmaTr(paciente);
 
   //vinculando a tabela no html
   let tabela = document.querySelector("#tabela-pacientes");
-  tabela.appendChild(pacienteTr);
+  tabela.appendChild(pacienteDaTr);
+
+  //limpando o form
+  form.reset();
 });
 
 function getForm(form) {
@@ -43,4 +27,26 @@ function getForm(form) {
     imc: calculaImc(form.peso.value, form.altura.value),
   };
   return paciente;
+}
+
+function montarUmaTr(paciente) {
+  let pacienteTr = document.createElement("tr");
+  pacienteTr.classList.add("paciente");
+
+  //adicionando nas trs as tds
+  pacienteTr.appendChild(montarTds(paciente.nome, "info-nome"));
+  pacienteTr.appendChild(montarTds(paciente.peso, "info-peso"));
+  pacienteTr.appendChild(montarTds(paciente.altura, "info-altura"));
+  pacienteTr.appendChild(montarTds(paciente.gordura, "info-gordura"));
+  pacienteTr.appendChild(montarTds(paciente.imc, "info-imc"));
+
+  return pacienteTr;
+}
+
+function montarTds(dado, classe) {
+  let tdsNoHtml = document.createElement("td");
+  tdsNoHtml.textContent = dado;
+  tdsNoHtml.classList.add(classe);
+
+  return tdsNoHtml;
 }
