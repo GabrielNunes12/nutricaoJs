@@ -68,10 +68,10 @@ botaoAdd.addEventListener("click", function (event) {
   gorduraNaTable.innerText = gorduraCadastro;
 
   //adicionando nas trs e tds
+  pacienteNaTable.appendChild(nomeNaTable);
   pacienteNaTable.appendChild(pesoNaTable);
   pacienteNaTable.appendChild(alturaNaTable);
   pacienteNaTable.appendChild(gorduraNaTable);
-  pacienteNaTable.appendChild(nomeNaTable);
 
   //vinculando a tabela no html
   let tabelaHtml = document.querySelector("#tabela-pacientes");
