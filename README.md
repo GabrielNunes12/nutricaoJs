@@ -29,6 +29,9 @@ fica uma linha em vermelho
 
 [x] criação de um design pattern para o projeto seguindo o SOLID
 
+[x] limpar o form do html com o Javascript puro
+
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
