@@ -10,12 +10,10 @@ botaoAdicionar.addEventListener("click", function (event) {
 
   let pacienteDaTr = montarUmaTr(paciente);
 
-  const erro = validaPaciente(paciente);
+  let erros = validaPaciente(paciente);
 
-  if (erro.length > 0) {
-    let mensagemErro = document.querySelector("#erroMensagem");
-    mensagemErro.classList.add("paciente-invalido");
-    mensagemErro.textContent = erro;
+  if (erros.length > 0) {
+    exibeMensagensDeErro(erros);
     return;
   } else {
     //vinculando a tabela no html
@@ -23,6 +21,7 @@ botaoAdicionar.addEventListener("click", function (event) {
     tabela.classList.add("paciente-valido");
     tabela.appendChild(pacienteDaTr);
 
+    document.querySelector("#mensagens-erro").innerHTML = "";
     //limpando o form
     form.reset();
   }
@@ -62,9 +61,22 @@ function montarTds(dado, classe) {
 }
 
 function validaPaciente(paciente) {
-  if (validaPeso(paciente.peso) && validaAltura(paciente.altura)) {
-    return "";
-  } else {
-    return `O peso foi ${paciente.peso} não pode ser acima de 1000 e altura foi ${paciente.altura} não pode ser acima dos 3m`;
+  let erros = [];
+  if (!validaPeso(paciente.peso)) {
+    erros.push(`${paciente.peso} está acima do peso`);
   }
+  if (!validaAltura(paciente.altura)) {
+    erros.push(`${paciente.altura} está acima da altura`);
+  }
+  return erros;
+}
+
+function exibeMensagensDeErro(erros) {
+  let ul = document.querySelector("#mensagens-erro");
+  erros.forEach(function (erro) {
+    let li = document.createElement("li");
+    li.textContent = erro;
+    li.classList.add("paciente-invalido");
+    ul.appendChild(li);
+  });
 }
