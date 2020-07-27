@@ -33,6 +33,8 @@ fica uma linha em vermelho
 
 [x] remover itens usando efeito bubble no javascript
 
+[x] utilização do setTimeout do javascript para fazer efeitos ao remover paciente
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
