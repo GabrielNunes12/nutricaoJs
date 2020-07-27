@@ -31,6 +31,7 @@ fica uma linha em vermelho
 
 [x] limpar o form do html com o Javascript puro
 
+[x] remover itens usando efeito bubble no javascript
 
 # Quer ajudar a melhorar o código?
 
