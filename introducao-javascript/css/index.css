@@ -139,3 +139,7 @@ button:disabled {
 .paciente-valido {
   color: green;
 }
+
+.mensagens-erro {
+  color: red;
+}
