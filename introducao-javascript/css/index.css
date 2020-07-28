@@ -143,3 +143,9 @@ button:disabled {
 .mensagens-erro {
   color: red;
 }
+
+#filtrar-paciente {
+  width: 200px;
+  height: 35px;
+  margin-bottom: 10px;
+}
