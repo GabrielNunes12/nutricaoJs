@@ -35,6 +35,8 @@ fica uma linha em vermelho
 
 [x] utilização do setTimeout do javascript para fazer efeitos ao remover paciente
 
+[x] fazer requisições na API usando AJAX e usando a função do JSON.Parse(); para transformar em json
+
 # Quer ajudar a melhorar o código?
 
 Primeiramente só baixar o projeto na sua máquina
